@@ -32,9 +32,10 @@ export const BusDataProvider = ({ children }) => {
                     longitude: bus.vehicle.position.longitude,
                     route_id: bus.vehicle.trip.route_id,
                     route_short_name: routeMap[bus.vehicle.trip.route_id] || 'Unknown', // Map route_id to route_short_name
+                    
                 })); 
                 setBusData(buses);
-                console.log(buses);
+                //console.log(buses);
             } catch (error) {
                 console.error('Error fetching bus data:', error);
             }
